@@ -1,4 +1,4 @@
-'''caesar cipher using UTF-8 character substitution'''
+'''caesar cipher using letter substitution'''
 
 alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
             , 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
