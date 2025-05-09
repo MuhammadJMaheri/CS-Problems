@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-http-app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: python-http-app
+  template:
+    metadata:
+      labels:
+        app: python-http-app
+    spec:
+      containers:
+      - name: python-http-app
+        image: python-http-app:v1
+        ports:
+        - containerPort: 5000
+        env:
+        - name: INSTANCE_ID
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name  # Uses pod name as the instance ID
